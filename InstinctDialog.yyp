@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "234f55f6-5315-4828-9cce-a2bcb17b163a",
+            "Value": {
+                "id": "d2f699f4-5991-42c4-bd25-779d72a5ad17",
+                "resourcePath": "views\\234f55f6-5315-4828-9cce-a2bcb17b163a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3b02c4a7-8795-4454-badf-3851a056b5f6",
             "Value": {
                 "id": "a8fa3590-9462-4480-8614-85fad307c6a2",
@@ -127,11 +135,27 @@
             }
         },
         {
+            "Key": "715a059f-95fd-400b-9966-bf54ca3d19c1",
+            "Value": {
+                "id": "50007135-917b-4e43-bc43-a6694fd09d8e",
+                "resourcePath": "scripts\\gmde_draw_text_tags\\gmde_draw_text_tags.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7189b0ba-c34c-415b-b0f9-9e069c964ca5",
             "Value": {
                 "id": "47bd6b7b-589a-42ce-b3d1-608abd610b0a",
                 "resourcePath": "views\\7189b0ba-c34c-415b-b0f9-9e069c964ca5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7d5fa5f9-5255-4b00-8d1b-43d6a888d248",
+            "Value": {
+                "id": "bf61e6a4-b775-4dfd-b82d-92462ee44415",
+                "resourcePath": "scripts\\gmde_draw_character_effect\\gmde_draw_character_effect.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -183,6 +207,14 @@
             }
         },
         {
+            "Key": "b71fede3-6bc6-4ef7-aec1-66e6dc3abe3b",
+            "Value": {
+                "id": "0b46bb00-31da-413c-83ac-c0945b8d5b31",
+                "resourcePath": "views\\b71fede3-6bc6-4ef7-aec1-66e6dc3abe3b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c7d244eb-a14a-4281-a4f5-e3e57b930e19",
             "Value": {
                 "id": "7cdb950f-24be-4411-a9c4-f36a3542f9d7",
@@ -204,6 +236,14 @@
                 "id": "d266593a-c873-4d09-be69-8f656d9da3cf",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cdde8c8b-c1ab-4866-8bcf-639315a030b6",
+            "Value": {
+                "id": "989ee89f-a79a-45b0-b7e8-315450defb89",
+                "resourcePath": "shaders\\sh_gmde_passthrough\\sh_gmde_passthrough.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -249,7 +289,9 @@
     ],
     "script_order": [
         "04ec76f3-46f5-4498-8c56-8110c768d49b",
-        "c8a299de-9f40-4ac7-825e-968902e1ae52"
+        "c8a299de-9f40-4ac7-825e-968902e1ae52",
+        "715a059f-95fd-400b-9966-bf54ca3d19c1",
+        "7d5fa5f9-5255-4b00-8d1b-43d6a888d248"
     ],
     "tutorial": ""
 }
