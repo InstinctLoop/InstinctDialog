@@ -15,5 +15,5 @@ uniform int   u_Character;      // The Unicode Character Code for the current ch
 void main()
 {
 	vec2 newTexcoord = v_vTexcoord + vec2(cos(v_vTexcoord.y + u_Time * 0.05) * (u_FontSize / u_TextureSize.x), 0);
-    gl_FragColor = v_vColour * texture2D( gm_BaseTexture, newTexcoord );
+	gl_FragColor = v_vColour * texture2D( gm_BaseTexture, newTexcoord );
 }
