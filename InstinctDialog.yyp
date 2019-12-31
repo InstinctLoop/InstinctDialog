@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "4ac8854c-7478-474e-9831-8ef74bd3c60c",
+            "Value": {
+                "id": "4e359ec3-3e08-4dbc-a1dd-d052990fa9fb",
+                "resourcePath": "views\\4ac8854c-7478-474e-9831-8ef74bd3c60c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "518374de-dcbf-4c88-9a9f-b61b733d7df7",
             "Value": {
                 "id": "2b668741-cf46-4789-95e2-2d69a1448035",
@@ -162,7 +170,7 @@
             "Key": "7d5fa5f9-5255-4b00-8d1b-43d6a888d248",
             "Value": {
                 "id": "bf61e6a4-b775-4dfd-b82d-92462ee44415",
-                "resourcePath": "scripts\\gmde_draw_character_effect\\gmde_draw_character_effect.yy",
+                "resourcePath": "scripts\\gmde_draw_character_prepare\\gmde_draw_character_prepare.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -287,6 +295,14 @@
             }
         },
         {
+            "Key": "f8fabb90-46d0-4998-bf5e-2bbc0cf97152",
+            "Value": {
+                "id": "ded8123f-29cc-42f6-9be8-a0473a92869d",
+                "resourcePath": "scripts\\gmde_draw_character\\gmde_draw_character.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f913e40e-de8e-40bc-8ff4-a15be844cbf7",
             "Value": {
                 "id": "787fe5a1-619c-4200-88ce-d6289c2cb77d",
@@ -300,6 +316,7 @@
         "c8a299de-9f40-4ac7-825e-968902e1ae52",
         "715a059f-95fd-400b-9966-bf54ca3d19c1",
         "7d5fa5f9-5255-4b00-8d1b-43d6a888d248",
+        "f8fabb90-46d0-4998-bf5e-2bbc0cf97152",
         "21f0c36a-7a25-4380-96e1-83c7de1dca5e"
     ],
     "tutorial": ""

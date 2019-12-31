@@ -1,8 +1,8 @@
 {
-    "id": "7d5fa5f9-5255-4b00-8d1b-43d6a888d248",
+    "id": "f8fabb90-46d0-4998-bf5e-2bbc0cf97152",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "gmde_draw_character_effect",
+    "name": "gmde_draw_character",
     "IsCompatibility": false,
     "IsDnD": false
 }

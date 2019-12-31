@@ -10,4 +10,18 @@ ds_list_add(shader, global.gmde_default_shader);
 var str = argument0;
 var strlen = string_length(str);
 
-for(var i = 0; i < 
+var ignore = false;
+
+for(var i = 0; i < strlen; i++) {
+	var char = string_char_at(str, i);
+	
+	if(ignore) {
+		
+	}
+	
+	if(char == global.gmde_tag_open_character) {
+		
+	}
+}
+
+shader_reset();
