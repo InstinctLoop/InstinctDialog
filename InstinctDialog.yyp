@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "aec6385b-715d-43e9-a955-10ed6566a525",
+            "Value": {
+                "id": "0de630fd-5c10-4b29-8237-9dc60079c6e4",
+                "resourcePath": "scripts\\hex_to_dec\\hex_to_dec.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b71fede3-6bc6-4ef7-aec1-66e6dc3abe3b",
             "Value": {
                 "id": "0b46bb00-31da-413c-83ac-c0945b8d5b31",
@@ -314,6 +322,7 @@
     "script_order": [
         "04ec76f3-46f5-4498-8c56-8110c768d49b",
         "c8a299de-9f40-4ac7-825e-968902e1ae52",
+        "aec6385b-715d-43e9-a955-10ed6566a525",
         "715a059f-95fd-400b-9966-bf54ca3d19c1",
         "7d5fa5f9-5255-4b00-8d1b-43d6a888d248",
         "f8fabb90-46d0-4998-bf5e-2bbc0cf97152",

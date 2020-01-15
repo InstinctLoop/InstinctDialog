@@ -61,4 +61,4 @@ shader_set_uniform_f(uni_char, ord(char));
 draw_set_font(font);
 draw_set_color(color);
 
-gmde_draw_character(char, index, color, font, effect, shader, cdata);
+return gmde_draw_character(char, index, color, font, effect, shader, cdata);

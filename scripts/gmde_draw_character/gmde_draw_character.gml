@@ -14,18 +14,19 @@
 var data = [];
 data[0] = 0; // Inc Width
 data[1] = 0; // Inc Height
-
+data[2] = 0; // Char Height
 
 var char = argument0, index = argument1, color = argument2, font = argument3, effect = argument4, shader = argument5, cdata = argument6;
 
 if(char == "\n") {
 	data[0] = -cdata[CDATA_X];
 	data[1] = cdata[CDATA_LINE_HEIGHT];
+	data[2] = -cdata[CDATA_LINE_HEIGHT];
 	return data;
 }
 
 data[0] = string_width(char);
-
+if(cdata[CDATA_LINE_HEIGHT] < string_height(char))data[2] = string_height(char) - cdata[CDATA_LINE_HEIGHT];
 
 // You can add your own effects below
 switch(effect) {
@@ -55,3 +56,5 @@ switch(effect) {
 		draw_text_color(cdata[CDATA_X], cdata[CDATA_Y], char, col1, col2, col1, col2, draw_get_alpha());
 		break;
 }
+
+return data;

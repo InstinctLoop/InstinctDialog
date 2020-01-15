@@ -77,4 +77,8 @@ global.gmde_tag_escape_character = "/"; // Must be one character
 // The character that represents a new line
 global.gmde_new_line_character = "\n";  // Must be one character
 
+// The character that represents the end of a region tag (Ex: [color:red]Hello, World![/color])
+//                                                       (                         this^      )
+global.gmde_tag_region_end_character = "/"; // Must be one character
+
 #endregion
