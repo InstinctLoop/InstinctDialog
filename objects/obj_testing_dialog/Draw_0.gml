@@ -1,0 +1,1 @@
+gmde_draw_text_tags(x, y, "[color:red]This is a [color:aqua][effect:shaking][effect:shaking][effect:shaking]TEST[/effect][/effect][/effect][color:#FFFFFF]! [color:$6FA10D]This is a [effect:random]random[/effect] [effect:rainbow][effect:spinning]color[/effect][/effect]![/color]");

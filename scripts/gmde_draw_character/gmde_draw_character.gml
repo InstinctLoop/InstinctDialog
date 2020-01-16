@@ -28,33 +28,47 @@ if(char == "\n") {
 data[0] = string_width(char);
 if(cdata[CDATA_LINE_HEIGHT] < string_height(char))data[2] = string_height(char) - cdata[CDATA_LINE_HEIGHT];
 
-// You can add your own effects below
-switch(effect) {
-	case "normal":
-		draw_text(cdata[CDATA_X], cdata[CDATA_Y], char);
-		break;
-	case "shaking":
-		draw_text(cdata[CDATA_X] + irandom(2) - 1, cdata[CDATA_Y] + irandom(2) - 1, char);
-		break;
-	case "twitching":
-		var r = irandom(20) == 0;
-		draw_text(cdata[CDATA_X] + (irandom(2) - 1) * r, cdata[CDATA_Y] + (irandom(2) - 1) * r, char);
-		break;
-	case "spinning":
-		draw_text(cdata[CDATA_X] + cos(index + current_time * 0.075), cdata[CDATA_Y] + sin(index + current_time * 0.075), char);
-		break;
-	case "random":
-		char = irandom_range(32, 127);
-		data[0] = string_width(char);
-		
-		draw_text(cdata[CDATA_X], cdata[CDATA_Y], char);
-		break;
-	case "rainbow":
-		var col1 = make_color_hsv((current_time * 0.05 + index * 15) % 256, 255, 255);
-		var col2 = make_color_hsv((current_time * 0.05 + (index + 1) * 15) % 256, 255, 255);
-		
-		draw_text_color(cdata[CDATA_X], cdata[CDATA_Y], char, col1, col2, col1, col2, draw_get_alpha());
-		break;
+var character = char, xpos = cdata[CDATA_X], ypos = cdata[CDATA_Y], color1 = color, color2 = color, color3 = color, color4 = color;
+
+for(var i = 0; i < ds_list_size(effect); i++) {
+	var efct = effect[|i];
+	
+	// You can add your own effects below
+	switch(efct) {
+		case "shaking":
+			xpos += irandom(2) - 1;
+			ypos += irandom(2) - 1;
+			break;
+		case "twitching":
+			var r = irandom(10) == 0;
+			
+			if(r) {
+				xpos += irandom(2) - 1;
+				ypos += irandom(2) - 1;
+			}
+			
+			break;
+		case "spinning":
+			xpos += cos(index + current_time * 0.01) * 2;
+			ypos += sin(index + current_time * 0.01) * 2;
+			break;
+		case "random":
+			character = chr(irandom_range(32, 127));
+			break;
+		case "rainbow":
+			var col1 = make_color_hsv((current_time * 0.05 + index * 15) % 256, 255, 255);
+			var col2 = make_color_hsv((current_time * 0.05 + (index + 1) * 15) % 256, 255, 255);
+			
+			color1 = col1;
+			color2 = col2;
+			color3 = col1;
+			color4 = col2;
+			
+			break;
+	}
 }
+
+data[0] = string_width(character);
+draw_text_color(xpos, ypos, character, color1, color2, color3, color4, draw_get_alpha());
 
 return data;

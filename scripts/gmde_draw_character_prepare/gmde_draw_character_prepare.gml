@@ -24,13 +24,13 @@ var uni_char = shader_get_uniform(shader, "u_Character");
 shader_set_uniform_f(uni_time, current_time);
 
 shader_set_uniform_f(uni_position, cdata[CDATA_X], cdata[CDATA_Y]);
-	
+
 var dpix = display_get_dpi_x();
 var dpiy = display_get_dpi_y();
 var fontsize = font_get_size(font);
 	
 shader_set_uniform_f(uni_fontsize, fontsize / 72 * dpix, fontsize / 72 * dpiy);
-	
+
 var texture = font_get_texture(font);
 	
 shader_set_uniform_f(uni_texturesize, texture_get_width(texture), texture_get_height(texture));

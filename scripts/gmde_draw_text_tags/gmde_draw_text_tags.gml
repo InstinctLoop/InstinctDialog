@@ -7,13 +7,13 @@ ds_list_add(font,   global.gmde_default_font);
 ds_list_add(effect, global.gmde_default_effect);
 ds_list_add(shader, global.gmde_default_shader);
 
-var str = argument0;
+var str = argument2;
 var strlen = string_length(str);
 
 var ignore = false;
 
 var index = 0;
-var cdata = [0, 0, 0];
+var cdata = [argument0, argument1, 0];
 
 for(var i = 1; i < strlen + 1; i++) {
 	var char = string_char_at(str, i);
@@ -38,6 +38,8 @@ for(var i = 1; i < strlen + 1; i++) {
 			
 			j++;
 		}
+		
+		i += j;
 		
 		// You can add your own tags below (must be lower case)
 		switch(string_lower(tag)) {
@@ -164,10 +166,29 @@ for(var i = 1; i < strlen + 1; i++) {
 				else ds_list_add(font, real(value));
 				
 				break;
+				
+			case ("/color"):
+				if(ds_list_size(color) > 1)ds_list_delete(color, ds_list_size(color) - 1);
+				break;
+			
+			case ("/font"):
+				if(ds_list_size(font) > 1)ds_list_delete(font, ds_list_size(font) - 1);
+				break;
+				
+			case ("/effect"):
+				if(ds_list_size(effect) > 1)ds_list_delete(effect, ds_list_size(effect) - 1);
+				break;
+				
+			case ("/shader"):
+				if(ds_list_size(shader) > 1)ds_list_delete(shader, ds_list_size(shader) - 1);
+				break;
+				
 		}
+		
+		continue;
 	}
 	
-	var data = gmde_draw_character_prepare(char, index++, color[|ds_list_size(color) - 1], font[|ds_list_size(font) - 1], effect[|ds_list_size(effect) - 1], shader[|ds_list_size(shader) - 1], cdata);
+	var data = gmde_draw_character_prepare(char, index++, color[|ds_list_size(color) - 1], font[|ds_list_size(font) - 1], effect, shader[|ds_list_size(shader) - 1], cdata);
 	cdata[0] += data[0];
 	cdata[1] += data[1];
 	cdata[2] += data[2];
