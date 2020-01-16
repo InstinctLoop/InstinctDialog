@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "7fb9e818-5729-4df1-9b67-3c9f7c12182a",
+            "Value": {
+                "id": "a0cf0b5a-f10f-4a3a-8e46-c43430619254",
+                "resourcePath": "scripts\\gmde_control_check\\gmde_control_check.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9630a443-6118-48b1-94d4-7361de885867",
             "Value": {
                 "id": "418d299d-7291-4ea5-a455-8a69a2636d33",
@@ -323,6 +331,7 @@
         "04ec76f3-46f5-4498-8c56-8110c768d49b",
         "c8a299de-9f40-4ac7-825e-968902e1ae52",
         "aec6385b-715d-43e9-a955-10ed6566a525",
+        "7fb9e818-5729-4df1-9b67-3c9f7c12182a",
         "715a059f-95fd-400b-9966-bf54ca3d19c1",
         "7d5fa5f9-5255-4b00-8d1b-43d6a888d248",
         "f8fabb90-46d0-4998-bf5e-2bbc0cf97152",

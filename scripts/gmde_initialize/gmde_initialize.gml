@@ -40,14 +40,18 @@ global.gmde_default_shader = sh_gmde_passthrough;
 // as below but replace "keyboard" with "mouse" or "gamepad" 
 // for example "global.gmde_mouse_confirm = mb_left"
 
-global.gmde_keyboard_confirm  = vk_space;
-global.gmde_keyboard_continue = vk_space;
-global.gmde_keyboard_skip     = vk_shift;
-global.gmde_keyboard_back     = vk_shift;
-global.gmde_keyboard_left     = vk_left;
-global.gmde_keyboard_right    = vk_right;
-global.gmde_keyboard_up       = vk_up;
-global.gmde_keyboard_down     = vk_down;
+// To have multiple controls just add a new index into the array.
+
+global.gmde_keyboard_confirm[0]  = vk_space;
+global.gmde_keyboard_continue[0] = vk_space;
+global.gmde_keyboard_skip[0]     = vk_shift;
+global.gmde_keyboard_back[0]     = vk_shift;
+global.gmde_keyboard_left[0]     = vk_left;
+global.gmde_keyboard_right[0]    = vk_right;
+global.gmde_keyboard_up[0]       = vk_up;
+global.gmde_keyboard_down[0]     = vk_down;
+
+global.gmde_gamepad_index = 0; // Set this to the gamepad index either during runtime (by code) or in this script.
 
 #endregion
 

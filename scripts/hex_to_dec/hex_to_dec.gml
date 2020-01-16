@@ -11,3 +11,5 @@ for(var i = string_length(str); i > 0; i++) {
     int += val * idx;
 	idx = idx << 4;
 }
+
+return int;
