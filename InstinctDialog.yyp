@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "1551fcc2-c054-4149-b994-7401255274ff",
+            "Value": {
+                "id": "6c5d3ba0-31b5-4c63-8bc9-c9ac1dd94f30",
+                "resourcePath": "scripts\\gmde_attach_component\\gmde_attach_component.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "194f5af7-971f-44e0-99f3-3db06aae3ed7",
             "Value": {
                 "id": "f0602fe7-1d02-4316-9d18-8e72362e64cb",
@@ -335,6 +343,14 @@
             }
         },
         {
+            "Key": "f1d0cb74-18e5-4c21-92b8-1d8c84cd0c73",
+            "Value": {
+                "id": "0c3d44b3-8bb1-49b0-a143-1fa3d0e358f6",
+                "resourcePath": "fonts\\fnt_secondary\\fnt_secondary.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "f3fb19ec-31e7-4990-8b54-f0b585ef5e52",
             "Value": {
                 "id": "7f153e1f-4790-48bf-8bf0-4650e5c3fa92",
@@ -376,6 +392,7 @@
         "7d5fa5f9-5255-4b00-8d1b-43d6a888d248",
         "f8fabb90-46d0-4998-bf5e-2bbc0cf97152",
         "21f0c36a-7a25-4380-96e1-83c7de1dca5e",
+        "1551fcc2-c054-4149-b994-7401255274ff",
         "145a7f11-12aa-4368-ac9c-005c685b5f66"
     ],
     "tutorial": ""

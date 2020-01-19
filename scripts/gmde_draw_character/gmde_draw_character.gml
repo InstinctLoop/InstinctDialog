@@ -15,13 +15,15 @@ var data = [];
 data[0] = 0; // Inc Width
 data[1] = 0; // Inc Height
 data[2] = 0; // Char Height
+data[3] = 0; // Line Width
 
 var char = argument0, index = argument1, color = argument2, font = argument3, effect = argument4, shader = argument5, cdata = argument6;
 
 if(char == "\n") {
-	data[0] = -cdata[CDATA_X];
+	data[0] = -cdata[3];
 	data[1] = cdata[CDATA_LINE_HEIGHT];
 	data[2] = -cdata[CDATA_LINE_HEIGHT];
+	data[3] = -cdata[3];
 	return data;
 }
 
@@ -68,7 +70,20 @@ for(var i = 0; i < ds_list_size(effect); i++) {
 	}
 }
 
+var sh = shader_current();
+shader_reset();
+
+surface_set_target(global.gmde_char_surface);
+
+draw_clear_alpha(c_black, 0);
+
 data[0] = string_width(character);
-draw_text_color(xpos, ypos, character, color1, color2, color3, color4, draw_get_alpha());
+data[3] = data[0];
+draw_text_color(0, 0, character, color1, color2, color3, color4, draw_get_alpha());
+
+surface_reset_target();
+
+shader_set(sh);
+draw_surface(global.gmde_char_surface, xpos, ypos);
 
 return data;

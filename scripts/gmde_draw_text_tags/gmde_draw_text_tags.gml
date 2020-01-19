@@ -13,7 +13,7 @@ var strlen = string_length(str);
 var ignore = false;
 
 var index = 0;
-var cdata = [argument0, argument1, 0];
+var cdata = [argument0, argument1, 0, 0, 0];
 
 for(var i = 1; i < strlen + 1; i++) {
 	var char = string_char_at(str, i);
@@ -23,6 +23,7 @@ for(var i = 1; i < strlen + 1; i++) {
 		cdata[0] += data[0];
 		cdata[1] += data[1];
 		cdata[2] += data[2];
+		cdata[3] += data[3];
 		break;
 	}
 	
@@ -162,8 +163,8 @@ for(var i = 1; i < strlen + 1; i++) {
 				break;
 			
 			case "shader":
-				if(asset_get_index(value))ds_list_add(font, asset_get_index(value));
-				else ds_list_add(font, real(value));
+				if(asset_get_index(value))ds_list_add(shader, asset_get_index(value));
+				else ds_list_add(shader, real(value));
 				
 				break;
 				
@@ -192,6 +193,7 @@ for(var i = 1; i < strlen + 1; i++) {
 	cdata[0] += data[0];
 	cdata[1] += data[1];
 	cdata[2] += data[2];
+	cdata[3] += data[3];
 }
 
 shader_reset();

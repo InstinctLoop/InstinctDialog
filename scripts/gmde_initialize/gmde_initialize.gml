@@ -14,9 +14,7 @@ The comments will explain what each thing does.
 // Call this script at game launch
 gml_pragma("global", "gmde_initialize();");
 
-
 #region Defaults
-
 // The Default Font to Use
 global.gmde_default_font = 0;
 
@@ -25,9 +23,6 @@ global.gmde_default_color = c_white;
 
 // The Default Effect to Use
 global.gmde_default_effect = "normal";
-
-// The Text to Display When No Text is Provided
-global.gmde_default_text = "[color:red]Error!![/color]";
 
 // The Default Text Shader to Use
 global.gmde_default_shader = sh_gmde_passthrough;
@@ -84,5 +79,11 @@ global.gmde_new_line_character = "\n";  // Must be one character
 // The character that represents the end of a region tag (Ex: [color:red]Hello, World![/color])
 //                                                       (                         this^      )
 global.gmde_tag_region_end_character = "/"; // Must be one character
+
+#endregion
+
+#region INTERNAL
+
+global.gmde_char_surface = surface_create(16, 16);
 
 #endregion

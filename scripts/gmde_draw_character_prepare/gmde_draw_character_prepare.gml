@@ -28,8 +28,18 @@ shader_set_uniform_f(uni_position, cdata[CDATA_X], cdata[CDATA_Y]);
 var dpix = display_get_dpi_x();
 var dpiy = display_get_dpi_y();
 var fontsize = font_get_size(font);
+
+var font_size_x = fontsize / 72 * dpix;
+var font_size_y = fontsize / 72 * dpiy;
 	
-shader_set_uniform_f(uni_fontsize, fontsize / 72 * dpix, fontsize / 72 * dpiy);
+shader_set_uniform_f(uni_fontsize, font_size_x, font_size_y);
+
+if(!surface_exists(global.gmde_char_surface)) {
+	global.gmde_char_surface = surface_create(font_size_x, font_size_y);
+}
+else if(surface_get_width(global.gmde_char_surface) != font_size_x || surface_get_height(global.gmde_char_surface) != font_size_y) {
+	global.gmde_char_surface = surface_create(font_size_x, font_size_y);
+}
 
 var texture = font_get_texture(font);
 	

@@ -44,6 +44,7 @@ var properties = argument1;
 
 switch(callback) {
 	case "construct":
+		properties[?"type"] = "Example"; // Replace "Example" with a short but descriptive name of your component.
 		//TODO: Add initialization logic here
 		break;
 		

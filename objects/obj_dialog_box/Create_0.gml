@@ -11,7 +11,13 @@ answer = 0;
 
 cursor_timer = 0;
 
+cursor_speed = 1;
+
 exiting = false;
 
 waiting = false;
 wait_arg = 0;
+wait_time = 0;
+
+displayed_string = "";
+current_page = "";
