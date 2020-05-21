@@ -47,37 +47,48 @@ switch(callback) {
 		var max_time = string_lower(properties[?"max_time"]);
 		var time = properties[?"time"];
 		
-		// Determine what type it is and adjust
-		if(string_copy(max_time, string_length(max_time) - 2, 2) == "ms")
+		if(!is_real(max_time)) 
 		{
-			time += delta_time / 1000; // delta_time is the time between this step event, and the previous. 
-			// It's measured in microseconds
-			/// 1 millisecond is 1000 microseconds
-		}
-		else 
-		{
-			switch(string_copy(max_time, string_length(max_time) - 2, 2))
+			// Determine what type it is and adjust
+			if(string_copy(max_time, string_length(max_time) - 2, 2) == "ms")
 			{
-				case "m":
-					time += delta_time / 1000 / 1000 / 60;
-					break;
-					
-				case "s":
-					time += delta_time / 1000 / 1000;
-					break;
-					
-				case "c":
-					time += cursor - last_cursor;
-					break;
-					
-				case "t":
-					time++;
-					break;
+				time += delta_time / 1000; // delta_time is the time between this step event, and the previous. 
+				// It's measured in microseconds
+				/// 1 millisecond is 1000 microseconds
 			}
+			else 
+			{
+				switch(string_copy(max_time, string_length(max_time) - 2, 2))
+				{
+					case "m":
+						time += delta_time / 1000 / 1000 / 60;
+						break;
+					
+					case "s":
+						time += delta_time / 1000 / 1000;
+						break;
+					
+					default:
+					case "c":
+						time += cursor - last_cursor;
+						break;
+					
+					case "t":
+						time++;
+						break;
+				}
+			}
+			
+			// Get real max time
+			max_time = real(string_digits(max_time));
+		}
+		else
+		{
+			// default is characters
+			time += cursor - last_cursor;
 		}
 		
-		// Get real max time, and store the new current time
-		max_time = real(string_digits(max_time));
+		// store the new current time
 		properties[?"time"] = time;
 		
 		var mix = time / max_time; // returns value between 0 and 1, where 1 means almost no mixing, and 0 means completely mixed.
