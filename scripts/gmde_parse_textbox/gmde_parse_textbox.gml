@@ -25,10 +25,10 @@ if(char == global.gmde_tag_open_character) {
 		case "effect":
 		case "shader":
 		case "font":
-		case ("/color"):
-		case ("/effect"):
-		case ("/shader"):
-		case ("/font"):
+		case "/color":
+		case "/effect":
+		case "/shader":
+		case "/font":
 			
 			// These tags are reserved. And are used in the drawing scripts
 			
