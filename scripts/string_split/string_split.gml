@@ -1,4 +1,3 @@
-/// @func string_split(string, separator)
 /// @arg string        The string to split.
 /// @arg separator     The character to split the string at.
 /// @desc Splits a string at the provided separator into an array

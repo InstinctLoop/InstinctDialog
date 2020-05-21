@@ -87,3 +87,5 @@ global.gmde_tag_region_end_character = "/"; // Must be one character
 global.gmde_char_surface = surface_create(16, 16);
 
 #endregion
+
+#macro _this_ id

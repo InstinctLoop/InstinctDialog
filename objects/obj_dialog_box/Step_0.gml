@@ -11,7 +11,16 @@ if(cursor < string_length(current_page)) {
 	}
 }
 
+displayed_string = string_copy(current_page, 1, cursor);
+
 for(var i = 0; i < ds_list_size(components); i++) {
 	var component = components[|i];
 	script_execute(component[?"__SCRIPT__"], "tick", component);
 }
+
+if(waiting) 
+{
+	
+}
+
+last_cursor = cursor;

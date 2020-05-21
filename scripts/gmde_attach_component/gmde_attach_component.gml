@@ -1,4 +1,3 @@
-/// @func gmde_attach_component( obj_dialog_box, component_script )
 /// @arg obj_dialog_box {INSTANCE} The dialog box instance to attach to.
 /// @arg component_script {SCRIPT} The component script to use.
 

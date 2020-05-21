@@ -1,4 +1,3 @@
-/// @func gmde_example_component(callback, properties)
 /// @arg callback {STRING} The name of the callback to execute
 /// @arg properties {DS_MAP} The data structure containing the properties of this component
 

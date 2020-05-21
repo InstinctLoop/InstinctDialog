@@ -1,4 +1,3 @@
-/// @func gmde_draw_character_effect(char, index, color, font, effect, shader, cdata)
 /// @arg char
 /// @arg index
 /// @arg color

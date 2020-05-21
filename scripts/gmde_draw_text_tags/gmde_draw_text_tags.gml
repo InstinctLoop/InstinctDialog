@@ -1,4 +1,6 @@
-/// @func gmde_draw_text_tags(x, y, string)
+/// @arg x
+/// @arg y
+/// @arg string
 
 var color = ds_list_create(), font = ds_list_create(), effect = ds_list_create(), shader = ds_list_create();
 

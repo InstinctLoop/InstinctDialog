@@ -19,54 +19,64 @@ if(char == global.gmde_tag_open_character) {
 		}
 	}
 	
-	// You can add your own tags below!
-	switch(tag) {
-		case "color":
-		case "effect":
-		case "shader":
-		case "font":
-		case "/color":
-		case "/effect":
-		case "/shader":
-		case "/font":
+	if(string_char_at(pages[|page], cursor + i) == global.gmde_tag_close_character) 
+	{
+		// You can add your own tags below!
+		switch(tag) {
+			case "color":
+			case "effect":
+			case "shader":
+			case "font":
+			case "/color":
+			case "/effect":
+			case "/shader":
+			case "/font":
 			
-			// These tags are reserved. And are used in the drawing scripts
+				// These tags are reserved. And are used in the drawing scripts
 			
-			break;
+				break;
 		
-		case "wait":
-			waiting = true;
-			wait_arg = real(val);
-			break;
+			case "wait":
+				waiting = true;
+				wait_arg = real(val);
+				break;
 		
-		case "pause":
-			cursor_timer = -real(val);
-			break;
+			case "pause":
+				cursor_timer = -real(val);
+				break;
 			
-		case "end":
-			exiting = true;
-			instance_destroy();
-			break;
+			case "end":
+				exiting = true;
+				instance_destroy();
+				break;
 		
-		case "script":
+			case "script":
 			
-			var map = json_decode(string_replace_all(val, "''", "\""));
+				var map = json_decode(string_replace_all(val, "''", "\""));
 			
-			if(is_undefined(map[?"args"])) script_execute(map[?"script"]);
-			else script_execute(map[?"script"], map[?"args"]);
+				if(is_undefined(map[?"args"])) script_execute(map[?"script"]);
+				else script_execute(map[?"script"], map[?"args"]);
 			
-			break;
+				break;
 			
-		case "portraits":
+			case "portraits":
 			
-			break;
+				break;
 		
-		case "nameplates":
+			case "nameplates":
 			
-			break;
+				break;
 		
-		case "background":
+			case "background":
 		
-			break;
+				break;
+			
+			case "glitch":
+				var props = gmde_attach_component(_this_, gmde_transtext_component);
+				
+				break;
+			
+			// Put your own tags below
+		}
 	}
 }
